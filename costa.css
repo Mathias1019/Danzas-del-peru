@@ -1,0 +1,79 @@
+/* === General === */
+body {
+  background: #fffbea; /* un amarillo muy claro estilo arena */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* === Header === */
+header {
+  background: #f4c20d; /* Amarillo brillante del sol */
+  color: #003366;      /* Azul marino para contraste */
+  padding: 20px 10px;
+  text-align: center;
+  border-bottom: 5px solid #ff8c00; /* Naranja playero */
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+/* === Main === */
+main {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+main p {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  font-size: 18px;
+  text-align: justify;
+  color: #444;
+}
+
+/* === Slideshow === */
+.slideshow {
+  width: 550px;
+  height: 350px;
+  margin: 0 auto 40px auto;
+  border: 4px solid #ffb347; /* Naranja suave */
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  background: #fffaf0; /* Arena clara */
+}
+
+.slideshow img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* === Footer === */
+footer {
+  background: linear-gradient(90deg, #ffdd00, #ff8c00, #ff4500);
+  color: #003366;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  border-top: 3px solid #003366;
+}
+
+footer p {
+  margin: 5px 0;
+}

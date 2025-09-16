@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danzas de la Selva</title>
+  <link rel="stylesheet" href="selva.css">
+</head>
+<body>
+  <h1>Danzas típicas de la selva peruana</h1>
+  <p>
+    La selva peruana es tierra de alegría y conexión con la naturaleza. 
+    Sus danzas están llenas de energía, simbolizando la vida en comunidad, 
+    la fuerza de la selva y la unión con sus tradiciones ancestrales.
+  </p>
+
+  <div class="slideshow">
+    <img id="imagen" />
+  </div>
+
+  <footer>
+    <p>
+      Ritmo, color y energía: las danzas de la selva peruana representan la fuerza de la naturaleza y la identidad amazónica.  
+    </p>
+    <p>© 2025 | Jaren Mathias Medina Lapa</p>
+  </footer>
+
+  <script>
+    // Lista de imágenes (👉 aquí pondrás tus archivos)
+    const imagenes = [
+      "selva/ayahuasca.jpg",
+      "selva/el Buri Buriti.jpg",
+      "selva/el Paucar.jpg",
+      "selva/la Danza Amazonica.jpg",
+      "selva/la Danza de la Boa.jpg"
+      ,"selva/la Huambisa.jpg",
+      "selva/la-Cajada.jpg",
+      "selva/la-Fiesta-de-la-Anaconda.jpg",
+      "selva/Orgullo-Shipibo.jpg",
+      "selva/Sitaracuy.jpg"
+    ];
+
+    let indice = 0;
+    const img = document.getElementById("imagen");
+
+    function mostrarSiguienteFoto() {
+      img.style.opacity = 0;
+      setTimeout(() => {
+        img.src = imagenes[indice];
+        img.style.opacity = 1;
+        indice = (indice + 1) % imagenes.length;
+      }, 500);
+    }
+
+    mostrarSiguienteFoto();
+    setInterval(mostrarSiguienteFoto, 3000);
+  </script>
+</body>
+</html>

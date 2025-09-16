@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danzas de la Costa Peruana</title>
+
+  <link rel="stylesheet" href="costa.css">
+</head>
+<body>
+  <header>
+    <h1>Danzas típicas de la costa peruana</h1>
+  </header>
+
+  <main>
+    <p>
+      La costa peruana es cuna de danzas llenas de ritmo, alegría y tradición, fruto del encuentro cultural entre lo afro, lo español y lo indígena. 
+      Estas expresiones reflejan la identidad y la pasión de su gente.
+    </p>
+
+    <!-- Carrusel -->
+    <div class="slideshow">
+      <img id="imagen">
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p> Ritmo, tradición y cultura: las danzas de la costa peruana nos conectan con nuestra identidad. </p>
+    <p>© 2025 | Jaren Mathias Medina Lapa</p>
+  </footer>
+
+  <script>
+    // Lista de imágenes
+    const imagenes = [
+      "costa/festejo.jpg",
+      "costa/alcatraz.jpg",
+      "costa/el_son_de_los_Diablos.jpg",
+      "costa/el_zapateo.jpg",
+      "costa/lamigo_o_landero.jpg",
+      "costa/lando.jpg",
+      "costa/marinera.jpg",
+      "costa/tondero.jpg",
+      "costa/vals_criollo.jpg",
+      "costa/zamacueca.jpg"
+    ];
+
+    let indice = 0;
+    const img = document.getElementById("imagen");
+
+    function mostrarSiguienteFoto() {
+      img.style.opacity = 0;
+
+      setTimeout(() => {
+        img.src = imagenes[indice];
+        img.style.opacity = 1;
+        indice = (indice + 1) % imagenes.length;
+      }, 500);
+    }
+
+    mostrarSiguienteFoto();
+    setInterval(mostrarSiguienteFoto, 3000);
+  </script>
+</body>
+</html>
+
+

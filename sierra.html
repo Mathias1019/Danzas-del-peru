@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danzas de la Sierra</title>
+  <link rel="stylesheet" href="sierra.css">
+</head>
+<body>
+  <h1>Danzas típicas de la sierra peruana</h1>
+  <p>
+    La sierra peruana es un espacio de tradición y espiritualidad. 
+    Sus danzas reflejan la devoción, la relación con la tierra y 
+    la herencia cultural de los pueblos andinos.
+  </p>
+
+  <div class="slideshow">
+    <img id="imagen" />
+  </div>
+
+  <footer>
+    <p>
+      Tradición y espiritualidad: las danzas de la sierra nos conectan con la historia y el alma del pueblo andino.
+    </p>
+    <p>© 2025 | Jaren Mathias Medina Lapa</p>
+  </footer>
+
+  <script>
+    // Lista de imágenes (👉 cámbialas por tus archivos)
+    const imagenes = [
+   
+   "sierra/Caporales.jpg",
+    "sierra/Danza-de-Tijeras.jpg",
+   "sierra/danza-el-Huayno.jpg",
+   "sierra/Diablada.jpg",
+   "sierra/huaconada.jpg",
+   "sierra/Huaylash.jpg",
+   "sierra/Pachahuara.jpg",
+   "sierra/Sara Kutipay.jpg",
+   "sierra/Tunantada.jpg",
+   "sierra/Valicha.jpg"
+    ];
+
+    let indice = 0;
+    const img = document.getElementById("imagen");
+
+    function mostrarSiguienteFoto() {
+      img.style.opacity = 0;
+      setTimeout(() => {
+        img.src = imagenes[indice];
+        img.style.opacity = 1;
+        indice = (indice + 1) % imagenes.length;
+      }, 500);
+    }
+
+    mostrarSiguienteFoto();
+    setInterval(mostrarSiguienteFoto, 3000);
+  </script>
+</body>
+</html>
